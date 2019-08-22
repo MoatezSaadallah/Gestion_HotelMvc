@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+ 	<bean id="clientDao"
+		class="com.gestionhotel.mvc.dao.impl.ClientDaoImpl" />
+	<bean id="clientService"
+		class="com.gestionhotel.mvc.services.impl.ClientServiceImpl">
+		<property name="dao" ref="clientDao"></property>
+	</bean>
+	
+	 	<bean id="chambreDao"
+		class="com.gestionhotel.mvc.dao.impl.ChambreDaoImpl" />
+	<bean id="chambreService"
+		class="com.gestionhotel.mvc.services.impl.ChambreServiceImpl">
+		<property name="dao" ref="chambreDao"></property>
+	</bean>
+
+	<bean id="tarifDao"
+		class="com.gestionhotel.mvc.dao.impl.TarifDaoImpl" />
+	<bean id="tarifService"
+		class="com.gestionhotel.mvc.services.impl.TarifServiceImpl">
+		<property name="dao" ref="tarifDao"></property>
+	</bean>
+	
+		<bean id="reservationDao"
+		class="com.gestionhotel.mvc.dao.impl.ReservationDaoImpl" />
+	<bean id="reservationService"
+		class="com.gestionhotel.mvc.services.impl.ReservationServiceImpl">
+		<property name="dao" ref="reservationDao"></property>
+	</bean>
+	
+			<bean id="factureDao"
+		class="com.gestionhotel.mvc.dao.impl.FactureDaoImpl" />
+	<bean id="factureService"
+		class="com.gestionhotel.mvc.services.impl.FactureServiceImpl">
+		<property name="dao" ref="factureDao"></property>
+	</bean>
+</beans>
